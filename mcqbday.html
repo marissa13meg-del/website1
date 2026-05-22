@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Veilyo MCQ</title>
+
+    <style>
+        html{
+    background: linear-gradient(135deg,#ffd6e8,#c8f7ff);
+    min-height:100%;
+}
+
+body{
+    font-family: "Comic Sans MS", cursive;
+    text-align:center;
+    margin:0;
+    padding:40px 20px;
+}
+
+#q1-page,
+#q2-page,
+#q3-page,
+#birthday-page{
+    background:white;
+    max-width:650px;
+    margin:auto;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+h1{
+    color:#ff6fa5;
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+h2{
+    color:#ff6fa5;
+}
+
+h3{
+    color:#555;
+}
+
+.mcq-btn{
+    display:block;
+    width:100%;
+    margin:12px 0;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background:#ffc9de;
+    color:#444;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+.mcq-btn:hover{
+    transform:scale(1.03);
+    background:#ffb0cf;
+}
+
+.error-msg{
+    color:#ff5f5f;
+    font-weight:bold;
+    margin-top:15px;
+    display:none;
+}
+.next-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ffc9de;
+    color:#444;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:0.2s;
+}
+
+.next-btn:hover{
+    background:#ffb0cf;
+    transform:scale(1.05);
+}
+
+.hidden{
+    display:none;
+}
+    </style>
+</head>
+
+<body>
+
+    <h1>Here comes the questions</h1>
+    <p>This is to verify if this is the real Veilyo</p>
+
+    <!-- Question 1 -->
+    <div id="q1-page">
+        <h3>Where was the place yall proved my head was flat? (it isn't)</h3>
+
+        <button class="mcq-btn" onclick="showError('q1-err')">
+            A) Chemistry lab
+        </button>
+
+        <button class="mcq-btn" onclick="nextStep('q1-page', 'q2-page')">
+            B) Outside CS lab
+        </button>
+
+        <button class="mcq-btn" onclick="showError('q1-err')">
+            C) Physics lab
+        </button>
+
+        <div id="q1-err" class="error-msg">
+            ACCESS DENIED. The real Veilyo would never say that. Try again, imposter.
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div id="q2-page" class="hidden">
+        <h3>Are tomatoes better than potatoes?</h3>
+
+        <button class="mcq-btn" onclick="showError('q2-err')">
+            A) No
+        </button>
+
+        <button class="mcq-btn" onclick="nextStep('q2-page', 'q3-page')">
+            B) Yes
+        </button>
+
+        <div id="q2-err" class="error-msg">
+            Knew you would say that... now press yes 
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div id="q3-page" class="hidden">
+        <h3>Which month did you receive the  secret letter?</h3>
+
+        <button class="mcq-btn" onclick="showError('q3-err')">
+            A) January
+        </button>
+
+        <button class="mcq-btn" onclick="showError('q3-err')">
+            B) February
+        </button>
+
+        <button class="mcq-btn" onclick="nextStep('q3-page', 'birthday-page')">
+            C) March
+        </button>
+
+        <div id="q3-err" class="error-msg">
+            ACCESS DENIED. The real Veilyo would never say that. Try again, imposter.
+        </div>
+    </div>
+
+    <!-- Birthday Page -->
+    <div id="birthday-page" class="hidden">
+        <h2>ACCESS GRANTED!!</h2>
+
+        <p>
+            Happy Birthday, Veilyo! You passed the test.
+            Welcome to your website!
+        </p>
+
+        <p style="font-size: 30px;">🎂✨🥳</p>
+
+        <a href="gallery.html" class="next-btn">NEXT ➜</a>
+    </div>
+
+    <script>
+        function nextStep(currentId, nextId) {
+            document.getElementById(currentId).classList.add('hidden');
+            document.getElementById(nextId).classList.remove('hidden');
+        }
+
+        function showError(errorId) {
+            document.querySelectorAll('.error-msg').forEach(error => {
+                error.style.display = 'none';
+            });
+
+            document.getElementById(errorId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

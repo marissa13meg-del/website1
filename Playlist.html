@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Playlist</title>
+
+    <style>
+        body{
+            background: linear-gradient(135deg, #ffd6e7, #d6e6ff);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card{
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        /* HOME BUTTON */
+        .home-btn img{
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .home-btn img:hover{
+            transform: scale(1.1);
+        }
+
+        .label{
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+            
+        }
+
+        .home{
+            margin-left: 200px;
+        }
+
+        .playlist{
+            display:flex;
+            flex-direction:column;
+            gap:15px;
+            margin-top:15px;
+        }
+
+        .song{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            background:#fff0f6;
+            padding:10px;
+            border-radius:15px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .song img{
+            width:60px;
+            height:60px;
+            border-radius:12px;
+            object-fit:cover;
+        }
+
+        .song p{
+            margin:0;
+            text-align:left;
+            font-size:14px;
+            color:#333;
+        }
+
+        .song small{
+            display:block;
+            text-align:left;
+            color:#666;
+            font-size:12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- HOME BUTTON -->
+     <div class="tog">
+        <a href="gallery.html" class="home-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Home">
+        </a>
+        <div class="lab">Home</div>
+    </div>
+
+    <img src="https://cdn.getmidnight.com/b5a0b552ae89a91aa34705031852bd16/size/w600/2022/08/1_1---2022-08-24T165236.013-1.png" alt="Playlist" width="100" height="100" class="home">
+
+    <div class="label">
+        🎵 Our Playlist 
+    </div>
+
+    <div class="playlist">
+
+        <div class="song">
+            <img src="https://i1-e.pinimg.com/736x/dc/c9/c2/dcc9c2ee13df82d2755ca5d5e1c7b2e6.jpg">
+            <p><b>Can't Help Falling in Love</b><br>
+            Elvis Presley</p>
+            <small>→ This would be the main song if our life was a movie 🎬🎵</small>
+        </div>
+
+        <div class="song">
+            <img src="https://i.pinimg.com/736x/12/32/7b/12327b4743e1e956c3d76a1874cf4c8e.jpg">
+            <p><b>Lazy Confession</b><br>
+            The Moldy Peaches</p>
+            <small>→ because its abt tomatoes and potaoes but they got one thing wrong saying they dont liek tomatoes 🍅</small>
+        </div>
+
+        <div class="song">
+            <img src="https://i.pinimg.com/736x/b9/8a/13/b98a136319f417582d84b43bc495673b.jpg">
+            <p><b>Count on Me</b><br>
+            Bruno Mars</p>
+            <small>→ bec this is the best song to represent 1,2,3,4,5,6,7,8,9,10 if uk wht i mean <3 </small>
+        </div>
+
+        <div class="song">
+            <img src="https://i1-e.pinimg.com/736x/2a/ef/61/2aef61de9aac00468ed0d9d0b7c05f51.jpg">
+            <p><b>Beautiful in White</b><br>
+            Shane Filan</p>
+            <small>→ because why not</small>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

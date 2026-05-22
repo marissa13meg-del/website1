@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velroypedia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --cream:#fff8ee;
+    --potato:#d9b382;
+    --tomato:#e76f51;
+    --sage:#9caf88;
+    --brown:#6d4c41;
+    --light:#fffdf9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.love{
+    display:flex;
+}
+.vel{
+    flex: 1;
+}
+.mar{
+    flex: 8;
+}
+body{
+    background:var(--cream);
+    font-family:'Quicksand',sans-serif;
+    color:var(--brown);
+    line-height:1.7;
+}
+
+header{
+    text-align:center;
+    padding:70px 20px 40px;
+}
+
+header h1{
+    font-family:'Playfair Display',serif;
+    font-size:4rem;
+    color:var(--tomato);
+}
+
+header p{
+    color:#777;
+    margin-top:10px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.wiki-card{
+    background:white;
+    padding:25px;
+    border-radius:25px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+h2{
+    color:var(--tomato);
+    margin-bottom:15px;
+    font-size:1.8rem;
+}
+
+.tag-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    background:#fef1ed;
+    border:2px dashed var(--tomato);
+    padding:8px 14px;
+    border-radius:50px;
+    font-size:.95rem;
+}
+
+.quote{
+    background:#fff7d6;
+    border-left:5px solid var(--potato);
+    padding:15px;
+    margin:12px 0;
+    border-radius:10px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.photo{
+    background:white;
+    border-radius:20px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.photo:hover{
+    transform:translateY(-4px);
+}
+
+.photo img{
+    width:100%;
+    border-radius:15px;
+}
+
+.caption{
+    margin-top:10px;
+    font-size:.9rem;
+}
+
+.timeline{
+    padding-left:20px;
+}
+
+.timeline li{
+    margin-bottom:12px;
+}
+
+.controversy{
+    border:3px dashed var(--tomato);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    background:#fff7f5;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
+}
+
+.doodle-row{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+    font-size:4rem;
+    margin-top: -50px;
+}
+
+
+
+
+
+
+.potato-war{
+    margin:60px 0;
+    padding:35px;
+    background:#faf4e8;
+    border-radius:30px;
+}
+
+.potato-war h2{
+    text-align:center;
+    margin-bottom:10px;
+    font-family:'Playfair Display',serif;
+}
+
+.classified{
+    text-align:center;
+    font-size:0.9rem;
+    letter-spacing:2px;
+    margin-bottom:30px;
+    opacity:.7;
+}
+
+.board{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.note{
+    padding:18px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transform:rotate(-2deg);
+}
+
+.note:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.red{
+    background:#ffd9d9;
+}
+
+.yellow{
+    background:#fff0b8;
+}
+
+.green{
+    background:#dff5d8;
+}
+
+.pink{
+    background:#ffdff0;
+}
+
+.blue{
+    background:#dbefff;
+}
+
+.orange{
+    background:#ffe4c6;
+}
+
+.note h3{
+    margin-bottom:10px;
+}
+
+.note ul{
+    padding-left:18px;
+}
+
+.photo-box{
+    background:white;
+    padding:12px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.photo-box img{
+    width:100%;
+    border-radius:10px;
+}
+
+.photo-box span{
+    display:block;
+    margin-top:8px;
+    font-size:.85rem;
+}
+
+.status{
+    margin-top:35px;
+    padding:20px;
+    background:white;
+    border-radius:20px;
+    text-align:center;
+    border:2px dashed #d9b382;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="doodle-row">
+        🥔 🍅 🥔 🍅 🥔
+    </div>
+
+    <img src="wp.jpg" >
+
+    <div class="love">
+      <!-- HOME BUTTON -->
+    <div class="vel">
+        <a href="gallery.html" class="home-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Home" width="100px" height="100px">
+        </a>
+        <div class="lab">Home</div>
+    </div>
+
+    <div class="mar">
+    <h1>Velroypedia</h1>
+    <p>Welcome to the velroy wikipedia!</p>
+    </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- Nicknames -->
+
+    <section class="wiki-card">
+        <h2>Nicknames</h2>
+
+        <div class="tag-container">
+            <span class="tag">🥔Potato</span>
+            <span class="tag">😁Minion</span>
+            <span class="tag">💅Pink Nailpolish</span>
+            <span class="tag">🥔Botatino Assasino</span>
+            <span class="tag">🐊Crocodilo Botatino</span>
+            <span class="tag">Chota Bheem</span>
+            <span class="tag">🦒Giraffe</span>
+            <span class="tag">🍆Brinjal</span>
+            <span class="tag">🍓Strawberry</span>
+            <span class="tag">👽Interdimentional Creature</span>
+        </div>
+    </section>
+
+    <!-- Iconic Lines -->
+
+    <section class="wiki-card">
+        <h2>Iconic Lines</h2>
+
+        <div class="quote">
+            potatoes are better than tomatoes(not true obv)
+        </div>
+
+        <div class="quote">
+            my foot
+        </div>
+
+        <div class="quote">
+            patcience is key
+        </div>
+
+        <div class="quote">
+            you may or may not be living in a simulation where i may or may not be controlling you to may or may not think that you may or may not be having a nighmare and may or may not make you use may or may not because that way you may or may not be stuck in a loop of may or may nots
+        </div>
+
+        <div class="quote">
+            everything is fair, love and lizardophyl
+        </div>
+
+        <div class="quote">
+            everyhting is fair love and duoling
+        </div>
+
+        <div class="quote">
+            everything is fair love and frog
+        </div>
+
+        <div class="quote">
+            everythig id fsir love cars and smthg smthg
+        </div>
+
+        <div class="quote">
+            and so on...
+        </div>
+    </section>
+
+    <!-- Daily Musts -->
+
+    <section class="wiki-card">
+        <h2>Daily Musts</h2>
+
+        <ul class="timeline">
+            <li>✨ tripping on air or BEN-zene</li>
+            <li>🌿 spotting green</li>
+            <li>📏 claiming he's taller than me</li>
+        </ul>
+    </section>
+
+    <!-- Early History -->
+
+    <section class="wiki-card">
+        <h2>Early History</h2>
+
+        <p>
+            born at a very young age
+        </p>
+    </section>
+
+    <!-- Potato Gallery -->
+
+    <!-- Controversy -->
+
+    <section class="wiki-card">
+        <h2></h2>
+
+        <div class="controversy">
+
+            <h3 style="margin-bottom:15px;">
+                Potato vs Tomato
+            </h3>
+
+            <!----------------->
+
+            <div class="potato-war">
+
+    <h2>🥔🍅 THE GREAT CONTROVERSY 🍅🥔</h2>
+
+    <p class="classified">
+        CLASSIFIED DOCUMENTS • DECLASSIFIED AFTER EXTENSIVE POTATO INVESTIGATION
+    </p>
+
+    <div class="board">
+
+        <div class="note red">
+            <h3>⚔️ The Claim</h3>
+            <p>
+                "potatoes are better than tomatoes"
+            </p>
+            <p>true or not true?</p>
+        </div>
+
+        <div class="note yellow">
+            <h3>📜 Historical Background</h3>
+            <p>
+                The exact beginning of the conflict remains unknown.
+                Historians suspect it began shortly after Velroy and Marissa met.
+            </p>
+        </div>
+
+        <div class="note blue">
+            <h3>📊 Scientific Findings</h3>
+
+            <p>
+                97% of statistics were created during the debate.
+                The remaining 3% may or may not exist.
+            </p>
+        </div>
+
+        <div class="note green">
+            <h3>🥔 Potato Supporte</h3>
+
+            <ul>
+                <li>fries</li>
+                <li>chips</li>
+                <li>mashed potato</li>
+                <li>potato bhaji</li>
+                <li>taste good  ig</li>
+                <li>can generate electricity</li>
+                <li>dont get affected by forrest fire</li>
+
+            </ul>
+        </div>
+
+        <div class="note pink">
+            <h3>🍅 Tomato SUpport</h3>
+
+            <ul>
+                <li>pizza sauce</li>
+                <li>tomato wedges</li>
+                <li>tomato soup</li>
+                <li>tomato curry</li>
+                <li>also taste good</li>
+                <li>used to mk potato taste good</li>
+                <li>can be eaten raw n still taste good</li>
+
+            </ul>
+        </div>
+
+        <div class="note orange">
+            <h3>📰 Witness Testimony</h3>
+
+            <p>
+                "I saw everything."
+                <br><br>
+                — Tomato #47
+                <br><br><br>
+                "ai claims we are better"
+                <br><br>
+                — Potato #2(aka mac)
+            </p>
+        </div>
+
+        
+    </div>
+
+    <div class="status">
+        <h3>🌍 Current Status</h3>
+
+        <p>
+            The debate remains unresolved.
+            Both sides continue defending their position.
+            Peace talks have repeatedly failed due to excessive stubbornness.
+        </p>
+    </div>
+
+</div>
+
+
+        </div>
+    </section>
+
+    <section class="wiki-card">
+        <h2>Victim evidences</h2>
+
+        <div class="grid">
+
+            <div class="photo">
+                <img src="pct.png" alt="">
+                <div class="caption">potato crowning tomato representive</div>
+            </div>
+
+            <div class="photo">
+                <img src="tcp.png" alt="">
+                <div class="caption">Tomato crowning potato</div>
+            </div>
+
+            <div class="photo">
+                <img src="pkt.png" alt="">
+                <div class="caption">potato killing tomato</div>
+            </div>
+
+            <div class="photo">
+                <img src="tkp.png" alt="">
+                <div class="caption">tomato crouwing potao</div>
+            </div>
+
+            <div class="photo">
+                <img src="pst.png" alt="">
+                <div class="caption">potato shooting a tomato</div>
+            </div>
+
+            <div class="photo">
+                <img src="2tkp.png" alt="">
+                <div class="caption">potato killed by 2 tomatoes</div>
+            </div>
+
+            <div class="photo">
+                <img src="vel.png" alt="">
+                <div class="caption">idk what to say</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cute Doodles -->
+
+    <section class="wiki-card">
+        <h2> </h2>
+
+        <div style="text-align:center;font-size:5rem;line-height:1.4;">
+            🥔💚🍅<br>
+            🍅🥔🍅<br>
+            🥔🍅🥔
+        </div>
+    </section>
+
+    
+
+</div>
+
+<footer>
+    Velroypedia • Last edited approximately 3 minutes ago by highly qualified potato researchers 🥔
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>velroy's menu</title>
+
+        <style>
+            
+
+    .menu-header {
+        text-align: center;
+        border-bottom: 2px dashed #E6E6FA;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        display: flex;
+    }
+    .card{
+        max-width: 500px;
+        margin: auto;
+        background: rgb(247, 166, 198);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .main{
+         width: 10%;
+    }
+
+    .aside{
+        width: 90%;
+    }
+    
+    .menu-subtitle {
+        font-style: italic;
+        color: #777;
+        font-size: 14px;
+    }
+
+    .menu-list {
+        text-align: left;
+    }
+
+    .menu-item {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #FAF0E6; /* Soft linen color line */
+    }
+
+    .item-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .item-name {
+        color: #5D54A4;
+        font-size: 17px;
+    }
+
+    .item-price {
+        color: #513438;
+        font-size: 14px;
+        font-family: 'Courier New', Courier, monospace; /* Makes it look like a real bill receipt */
+    }
+
+    .item-ingredients {
+        margin: 4px 0;
+        font-size: 12px;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .item-desc {
+        margin: 5px 0 0 0;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.4;
+    }
+
+    .menu-footer-note {
+        background-color: #FFF5EE; /* Cute seashell peach tint */
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 12px;
+        color: #A0522D;
+        line-height: 1.4;
+        margin-top: 20px;
+    }
+
+    body{
+        background-color: #fbd3d9;
+    }
+</style>
+    </head>
+    <body>
+
+        <div id="menu-section" class="card" style="max-width: 600px; margin: 0 auto;">
+    
+    <!-- MENU HEADER -->
+    <div class="menu-header">
+        
+        <!-- HOME BUTTON -->
+     <div class="main">
+        <a href="gallery.html" class="home-btn">
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Home" width="100px" height="100px">
+        </a>
+        <div class="lab">Home</div>
+    </div>
+    <div class="aside">
+        <span style="font-size: 40px;">👨‍🍳</span>
+        <h2>The Veroy menu</h2>
+        <p class="menu-subtitle">" He swears they taste good "</p>
+    </div>
+    </div>
+
+    <!-- MENU ITEMS CONTAINER -->
+    <div class="menu-list">
+        
+        <!-- ITEM 1 -->
+        <div class="menu-item">
+            <div class="item-title-row">
+                <span class="item-name">🍫 The Choco-Pickle </span>
+                <span class="item-price">2 Brain Cells</span>
+            </div>
+            <p class="item-ingredients">chocolate + pickle</p>
+            <p class="item-desc">"the sweet and spicy combo"</p>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="menu-item">
+            <div class="item-title-row">
+                <span class="item-name">🐻 The Bear pickle</span>
+                <span class="item-price">3 brain cells</span>
+            </div>
+            <p class="item-ingredients">Gummy bears + pickle </p>
+            <p class="item-desc">"Another sweet and spicy combe. Highly recommended for people who think regular snacks are 'too normal'."</p>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="menu-item">
+            <div class="item-title-row">
+                <span class="item-name">🍌 The Carbonated Banana</span>
+                <span class="item-price">$Free (With Apology)</span>
+            </div>
+            <p class="item-ingredients">Chilled Coca-Cola + banana slices</p>
+            <p class="item-desc">"This suprisingly tasts good"</p>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="menu-item">
+            <div class="item-title-row">
+                <span class="item-name">🍋 The Soursweet Jamun</span>
+                <span class="item-price">3 brain cells</span>
+            </div>
+            <p class="item-ingredients">Gulab Jamun + lemon juice</p>
+            <p class="item-desc">"Gujrath trip specia;"</p>
+        </div>
+
+    </div>
+
+    <!-- DISCLAIMER FOOTER -->
+    <div class="menu-footer-note">
+        ⚠️ <strong>CRITICAL DISCLAIMER:</strong> Eating any of the above items may or may not damgage your tastebuds' warranty. The developer is not responsible for any digestive problems.<br>No photos added here because Mr. Secret Agent only sent disappearing pictures
+    </div>
+
+</div>
+    </body>
+</html>
